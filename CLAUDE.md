@@ -40,6 +40,7 @@ Design happens in Figma first. Figma frames are provided as pasted screenshots â
    * H1: 48px / 120% line-height
    * H2: 32px / 120% line-height
    * H3: 24px / 120% line-height
+   * H4: 20px / 120% line-height
 * Body: "Geist", Regular
    * Body1: 20px / 100% line-height
    * Body2: 16px / 100% line-height

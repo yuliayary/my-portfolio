@@ -90,7 +90,7 @@ export default function ContactModal() {
           type="button"
           onClick={() => setIsOpen((value) => !value)}
           aria-expanded={isOpen}
-          className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-h3 font-heading text-brand-black"
+          className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-h4 font-heading text-brand-black md:text-h3"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/contact_me.svg" alt="" width={16} height={16} className="shrink-0" />
