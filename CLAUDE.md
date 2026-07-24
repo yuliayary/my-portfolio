@@ -83,10 +83,11 @@ my-portfolio/
 * Don't invent real copy or brand assets (icons, logos). Use clearly-marked placeholders (`// TODO: ...`) instead of guessing silently.
 * Header is sticky (persistent on scroll), background stays constant (no color/shadow change on scroll).
    * At the top of the page: header shows only the "Contact me" button.
-   * Once scrolled past the first section: "Yuliia Yaryna" fades in smoothly on the left side of the header (and fades out if scrolled back to the top). "Contact me" button remains visible throughout.
+   * Once the Hero's decorative mark scrolls out of view: "Yuliia Yaryna" fades in smoothly on the left side of the header (and fades out if scrolled back to the top). Tracked with an IntersectionObserver on that mark, not on the section as a whole. "Contact me" button remains visible throughout.
    * "Contact me" opens ContactModal — not a separate page/route.
 * WorkGrid displays case studies as a grid of cards, side by side.
-   * Each card shows image + title only (no description or tags).
+   * Each card shows image, title (H3, steps to H4 on mobile), and a short project-type line beneath it (Body2, light grey — e.g. "Website design"). No description or tags.
+   * Two columns on desktop, one on mobile. Card image is 4:3 with a 24px corner radius.
    * Hover animation: a "lighting up" effect, smooth/slow-ish timing. Exact visual treatment not yet decided — // TODO: decide exact hover animation. Whether it applies to all cards or just the first case study card is also undecided — // TODO: decide scope (all cards vs. first card only). Ask before implementing rather than guessing.
 
 ## Animation philosophy

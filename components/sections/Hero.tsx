@@ -1,9 +1,10 @@
 export default function Hero() {
-  // Mobile anchors the content with an explicit top offset; desktop centers it.
+  // Spacing is explicit rather than viewport-driven: min-h-screen would force a
+  // fixed amount of leftover space below the mark, which sets the gap to WorkGrid.
   return (
     <section
       id="hero"
-      className="flex min-h-screen flex-col justify-start px-4 pt-[248px] sm:px-6 md:justify-center md:px-10 md:pt-0"
+      className="flex flex-col px-4 pt-[184px] pb-[88px] sm:px-6 md:px-10 md:pt-[272px] md:pb-[112px]"
     >
       {/* Type steps down to H3 on mobile so each phrase keeps its own line. */}
       <h1 className="font-heading text-h3 text-grey-light md:text-h1">
