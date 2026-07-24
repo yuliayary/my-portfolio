@@ -100,7 +100,12 @@ export default function ContactModal() {
         layout
         transition={boxTransition}
         style={{ borderRadius: 24 }}
-        className="absolute top-0 right-0 flex flex-col overflow-hidden border border-brand-black bg-brand-white md:static md:flex-row md:items-center"
+        // w-max is load-bearing on mobile: the wrapper this is anchored to has
+        // zero width, so `right-0` with an auto width resolves via shrink-to-fit
+        // against zero available space. Engines disagree on the result, and a
+        // too-narrow box lets the label overflow into the right padding, where
+        // overflow-hidden clips it. max-content sizes to the contents instead.
+        className="absolute top-0 right-0 flex w-max flex-col overflow-hidden border border-brand-black bg-brand-white md:static md:w-auto md:flex-row md:items-center"
       >
         <motion.button
           layout="position"
