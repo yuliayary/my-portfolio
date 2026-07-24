@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
-// TODO: replace with real LinkedIn URL and CV file once provided
-const LINKEDIN_URL = "#";
+const LINKEDIN_URL = "https://www.linkedin.com/in/yulia-yaryna/";
+// TODO: replace with the real CV file once provided
 const CV_URL = "#";
 const CONTACT_EMAIL = "yulia.yaryna@gmail.com";
 
