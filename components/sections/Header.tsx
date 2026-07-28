@@ -9,18 +9,25 @@ export default function Header() {
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    // Tracks the Hero's decorative mark — the last element in the Hero — so the
-    // name appears as soon as that scrolls out, not at the end of the section.
-    const mark = document.getElementById("hero-mark");
-    if (!mark) return;
+    // Tracks the Hero headline so the name appears the moment its last line
+    // slips behind the sticky header. rootMargin pulls the observer's top edge
+    // down by the header's height — without it the trigger waits until the
+    // headline reaches the viewport top, ~one header-height too late.
+    const mark = document.getElementById("hero-headline");
+    const header = document.querySelector("header");
+    if (!mark || !header) return;
+
+    const headerHeight = header.offsetHeight;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // bottom <= 0 distinguishes "scrolled above the viewport" from
-        // "not reached yet", which also reports as not intersecting.
-        setShowName(!entry.isIntersecting && entry.boundingClientRect.bottom <= 0);
+        // bottom <= headerHeight distinguishes "scrolled up behind the header"
+        // from "not reached yet", which also reports as not intersecting.
+        setShowName(
+          !entry.isIntersecting && entry.boundingClientRect.bottom <= headerHeight,
+        );
       },
-      { threshold: 0 },
+      { threshold: 0, rootMargin: `-${headerHeight}px 0px 0px 0px` },
     );
 
     observer.observe(mark);
