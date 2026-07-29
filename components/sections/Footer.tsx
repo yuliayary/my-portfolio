@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Container from "@/components/ui/Container";
 
 export default function Footer() {
   return (
@@ -12,19 +13,22 @@ export default function Footer() {
     // mirrors the sky image's own range (#f4f6fa at top, matching the page, to
     // #6e8fc1 at bottom) so both seams composite invisibly; the shadow extends that
     // bottom tone past the final row.
-    <footer className="relative flex w-full max-w-full aspect-[10/3] max-h-[432px] min-h-[200px] items-end overflow-hidden bg-[linear-gradient(to_bottom,#f4f6fa,#6e8fc1)] px-4 pb-8 shadow-[0_2px_0_0_#6e8fc1] sm:px-6 md:px-10 md:pb-12">
+    <footer className="relative flex w-full max-w-full aspect-[10/3] max-h-[432px] min-h-[200px] items-end overflow-hidden bg-[linear-gradient(to_bottom,#f4f6fa,#6e8fc1)] pb-8 shadow-[0_2px_0_0_#6e8fc1] md:pb-12">
+      {/* The sky bleeds to the full width; the caption aligns to the shell. */}
       <Image src="/footer-sky.jpg" alt="" fill sizes="100vw" className="object-cover" />
-      <p className="relative flex items-center gap-2 font-body text-body2 text-brand-black">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/contact_me.svg" alt="" width={24} height={24} className="shrink-0" />
-        {/* Wrapped in a span so the <br> stays in normal flow rather than
-            becoming a flex item, which would stop it breaking the line. */}
-        <span>
-          Designed and vibe-coded by Yuliia Yaryna.{" "}
-          <br className="md:hidden" />
-          Berlin, 2026
-        </span>
-      </p>
+      <Container className="relative">
+        <p className="flex items-center gap-2 font-body text-body2 text-brand-black">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/contact_me.svg" alt="" width={24} height={24} className="shrink-0" />
+          {/* Wrapped in a span so the <br> stays in normal flow rather than
+              becoming a flex item, which would stop it breaking the line. */}
+          <span>
+            Designed and vibe-coded by Yuliia Yaryna.{" "}
+            <br className="md:hidden" />
+            Berlin, 2026
+          </span>
+        </p>
+      </Container>
     </footer>
   );
 }
