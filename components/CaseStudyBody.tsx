@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -13,6 +14,7 @@ type HastNode = {
   type: string;
   value?: string;
   tagName?: string;
+  properties?: { src?: string; alt?: string };
   children?: HastNode[];
 };
 
@@ -27,6 +29,44 @@ function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+/** A real, full-bleed content image (natural aspect ratio, rounded). */
+function ContentImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className="mt-12 w-full">
+      {/* width/height 0 + sizes lets the image size responsively to its natural
+          aspect ratio; it spans the article, capped by the shell on wide screens. */}
+      <Image
+        src={src}
+        alt={alt}
+        width={0}
+        height={0}
+        sizes="(min-width: 1280px) 1200px, 100vw"
+        className="h-auto w-full rounded-[24px]"
+      />
+    </figure>
+  );
+}
+
+/** Two or more images side by side (one column on mobile). */
+function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
+  return (
+    <div className="mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+      {images.map((im, i) => (
+        <figure key={i} className="w-full">
+          <Image
+            src={im.src}
+            alt={im.alt}
+            width={0}
+            height={0}
+            sizes="(min-width: 768px) 590px, 100vw"
+            className="h-auto w-full rounded-[24px]"
+          />
+        </figure>
+      ))}
+    </div>
+  );
 }
 
 /** A grey rounded image slot — replaced with real exports once available. */
@@ -79,6 +119,22 @@ const components: Components = {
       (c) => !(c.type === "text" && !(c.value ?? "").trim()),
     );
 
+    // A paragraph of only images renders full-bleed (outside the narrow text
+    // column). One image spans the width; two or more sit side by side.
+    // Markdown groups images written on consecutive lines into one paragraph.
+    const imgKids = kids.filter((c) => c.type === "element" && c.tagName === "img");
+    if (imgKids.length > 0 && imgKids.length === kids.length) {
+      const images = imgKids.map((img) => ({
+        src: String(img.properties?.src ?? ""),
+        alt: String(img.properties?.alt ?? ""),
+      }));
+      return images.length === 1 ? (
+        <ContentImage src={images[0].src} alt={images[0].alt} />
+      ) : (
+        <ImageRow images={images} />
+      );
+    }
+
     // A paragraph that is entirely italic becomes a pulled-out callout
     // (the "How might we…" questions and the client quote).
     if (kids.length === 1 && kids[0].type === "element" && kids[0].tagName === "em") {
@@ -129,9 +185,10 @@ const components: Components = {
     );
   },
 
-  // Fallback: any leftover markdown image renders as a placeholder too.
-  img({ alt }) {
-    return <ImagePlaceholder label={alt ?? "Image"} />;
+  // Fallback for any image not caught as a standalone paragraph above.
+  img({ src, alt }) {
+    if (!src) return <ImagePlaceholder label={alt ?? "Image"} />;
+    return <ContentImage src={String(src)} alt={alt ?? ""} />;
   },
 };
 

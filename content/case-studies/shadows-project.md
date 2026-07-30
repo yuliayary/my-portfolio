@@ -13,7 +13,7 @@ This project was done during my studies at Projector Creative and Tech Online In
 
 Working with the client involved an initial briefing and a final presentation. Direct communication and intermediate feedback were unfortunately not foreseen for this project.
 
-[Image]
+![Project overview](/image1.png)
 
 ## The task
 
@@ -25,7 +25,8 @@ My job was to design an information website for the Shadows project's new campai
 
 Shadows project already has a few websites for their previous campaigns and an established visual identity, but they were open to experiments for their new project.
 
-[Image: 2 screenshots of old websites]
+![Shadows project's previous campaign website](/image2a.png)
+![Another Shadows project campaign website](/image2b.png)
 
 ## The challenges
 
