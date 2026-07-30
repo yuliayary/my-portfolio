@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     // SVG for modern browsers; the app/favicon.ico convention supplies the
     // fallback link automatically for older ones.
-    icon: { url: "/favicon.svg", type: "image/svg+xml" },
+    icon: { url: "/heart.svg", type: "image/svg+xml" },
   },
 };
 
