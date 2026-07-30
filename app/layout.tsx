@@ -17,6 +17,11 @@ const stackSansNotch = Stack_Sans_Notch({
 export const metadata: Metadata = {
   title: "Yuliia Yaryna — UX Designer & Researcher",
   description: "Portfolio of Yuliia Yaryna, UX/UI designer and researcher.",
+  icons: {
+    // SVG for modern browsers; the app/favicon.ico convention supplies the
+    // fallback link automatically for older ones.
+    icon: { url: "/favicon.svg", type: "image/svg+xml" },
+  },
 };
 
 export default function RootLayout({
