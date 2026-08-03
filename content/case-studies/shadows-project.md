@@ -72,6 +72,17 @@ Shadows project's previous campaigns, working with light, the Ukrainian symbol c
 
 [video: Looping demo of the final Shadows website design]
 
+![Final Shadows website design](/1.png)
+
+![Shadows website design detail](/2a.png)
+![Shadows website design detail](/2b.png)
+
+![Shadows website design detail](/3.png)
+
+![Shadows website design detail](/4.png)
+
+![Shadows website design detail](/5.png)
+
 ## Client's feedback
 
 *The "turn the light on" moment is a strong metaphor. The overall layout organization has good bones. For the flower imagery: I would suggest exploring more visual elements that carry the same conceptual weight, to see what else would land.*
