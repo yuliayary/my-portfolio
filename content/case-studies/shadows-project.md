@@ -70,7 +70,7 @@ Shadows project's previous campaigns, working with light, the Ukrainian symbol c
 
 ## The result
 
-[Image: final design — mobile first, mockups]
+[video: Looping demo of the final Shadows website design]
 
 ## Client's feedback
 

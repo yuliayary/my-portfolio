@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import VideoEmbed from "@/components/VideoEmbed";
 
 // The id given to the "The result" heading so the "Jump to result" button in
 // the page header can anchor to it. Kept in sync with slugify() below.
@@ -152,6 +153,10 @@ const components: Components = {
     if (bracket) {
       const label = bracket[1].trim();
       if (/^check another case study$/i.test(label)) return <NextCaseLink />;
+      // A [video: alt text] marker renders the embedded product-demo clip;
+      // the text after the colon becomes its accessible label.
+      const video = label.match(/^video:?\s*(.*)$/i);
+      if (video) return <VideoEmbed alt={video[1].trim() || "Product demo"} />;
       return <ImagePlaceholder label={label} />;
     }
 
