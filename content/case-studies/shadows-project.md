@@ -42,8 +42,6 @@ Second challenge: the content for the future website was mostly missing. The mai
 
 *How might we create a design that would fit the missing content once it's available?*
 
-[Image]
-
 ## Understanding decolonization
 
 To fill the gap of no content for the website available, I've decided to learn about Ukrainian decolonization myself. Luckily, this topic was one of my interests, and I had a book on decolonization by a Ukrainian author at home. It helped me understand that decolonization is not a linear process and involves navigating a range of feelings, such as helplessness, shame, anger, and grief. New knowledge is key to reaching the next stage of decolonization, and hopefully our informational website can help people too.
