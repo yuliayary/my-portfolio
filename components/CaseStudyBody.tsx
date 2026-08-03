@@ -15,7 +15,7 @@ type HastNode = {
   type: string;
   value?: string;
   tagName?: string;
-  properties?: { src?: string; alt?: string };
+  properties?: { src?: string; alt?: string; title?: string };
   children?: HastNode[];
 };
 
@@ -32,18 +32,23 @@ function slugify(text: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
-/** A real, full-bleed content image (natural aspect ratio, rounded). */
-function ContentImage({ src, alt }: { src: string; alt: string }) {
+/**
+ * A real content image (natural aspect ratio, rounded). Full-bleed by default;
+ * pass `narrow` (via a `"narrow"` markdown image title) to cap it at the text
+ * column width so it lines up with the running copy.
+ */
+function ContentImage({ src, alt, narrow }: { src: string; alt: string; narrow?: boolean }) {
   return (
-    <figure className="mt-12 w-full">
+    <figure className={`mt-12 ${narrow ? COLUMN : "w-full"}`}>
       {/* width/height 0 + sizes lets the image size responsively to its natural
-          aspect ratio; it spans the article, capped by the shell on wide screens. */}
+          aspect ratio; it spans the article (or the text column when narrow),
+          capped by the shell on wide screens. */}
       <Image
         src={src}
         alt={alt}
         width={0}
         height={0}
-        sizes="(min-width: 1280px) 1200px, 100vw"
+        sizes={narrow ? "(min-width: 560px) 560px, 100vw" : "(min-width: 1280px) 1200px, 100vw"}
         className="h-auto w-full rounded-[24px]"
       />
     </figure>
@@ -128,9 +133,11 @@ const components: Components = {
       const images = imgKids.map((img) => ({
         src: String(img.properties?.src ?? ""),
         alt: String(img.properties?.alt ?? ""),
+        // An image titled "narrow" is capped at the text column width.
+        narrow: img.properties?.title === "narrow",
       }));
       return images.length === 1 ? (
-        <ContentImage src={images[0].src} alt={images[0].alt} />
+        <ContentImage src={images[0].src} alt={images[0].alt} narrow={images[0].narrow} />
       ) : (
         <ImageRow images={images} />
       );
@@ -191,9 +198,9 @@ const components: Components = {
   },
 
   // Fallback for any image not caught as a standalone paragraph above.
-  img({ src, alt }) {
+  img({ src, alt, title }) {
     if (!src) return <ImagePlaceholder label={alt ?? "Image"} />;
-    return <ContentImage src={String(src)} alt={alt ?? ""} />;
+    return <ContentImage src={String(src)} alt={alt ?? ""} narrow={title === "narrow"} />;
   },
 };
 

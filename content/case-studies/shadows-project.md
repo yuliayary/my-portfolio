@@ -54,13 +54,11 @@ To fill the gap of no content for the website available, I've decided to learn a
 
 I've been looking for inspiration online and in art books. One day I saw this art project by [Natalie Jeremijenko](https://en.wikipedia.org/wiki/Natalie_Jeremijenko) called A-trees, in which she created a program that simulates a growing tree. I thought that the process of decolonization is also like a tree in a way: it's a process of renewal and growth; some trees make it, others don't. The decolonization process is unique to every person, like every tree is unique.
 
-[Image: A-trees / growing tree reference]
-
 Another important part of the website that needed to be represented was knowledge. We often hear that knowledge is light and lights up the way, so here it is, my second metaphor.
 
-[Image: light / knowledge metaphor]
-
 Putting both metaphors together, here is my idea for this website: make parts of the website feel like a growing tree. Interacting with the website means getting more knowledge, which turns on the light and makes the tree more alive.
+
+![Light as a metaphor for knowledge](/lights.png "narrow")
 
 ## Some references
 
