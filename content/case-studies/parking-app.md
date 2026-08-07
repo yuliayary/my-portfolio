@@ -8,6 +8,7 @@ tags: ["Mobile design"]
 type: "App design"
 order: 2
 cover: "" # TODO: add cover image to /public/images/ and reference it here
+mark: "/brand/parking-mark.svg"
 ---
 
 This project was done during my studies at Projector Creative and Tech Online Institute as a study project.

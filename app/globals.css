@@ -40,5 +40,5 @@ body {
   /* Custom pixel cursor; hotspot centered on the 20x20 mark. Links and buttons
      keep their pointer via UA/Tailwind defaults. Safari ignores SVG cursors and
      falls back to the default arrow. */
-  cursor: url("/cursor.svg") 10 10, auto;
+  cursor: url("/icons/cursor.svg") 10 10, auto;
 }

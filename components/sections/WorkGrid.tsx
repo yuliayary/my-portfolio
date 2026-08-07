@@ -7,7 +7,7 @@ const CASE_STUDIES = [
     slug: "shadows-project",
     title: "Designing a website about Ukrainian decolonization",
     type: "Website design",
-    image: "/thumbnail.png",
+    image: "/case-studies/shadows/thumbnail.png",
   },
   { slug: "parking-app", title: "Designing a parking app", type: "App design" },
   { slug: "project-three", title: "Shadows project: Ukrainian decolonization", type: "Website design" },

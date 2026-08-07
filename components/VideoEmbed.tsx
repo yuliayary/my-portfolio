@@ -6,8 +6,8 @@ import { useEffect, useRef } from "react";
 
 // The single product-demo clip lives at fixed paths; if more case-study
 // videos land later, lift these to props. Native ratio is 1920x1080 (16:9).
-const SRC = "/videos/mockup.mp4";
-const POSTER = "/videos/mockup-poster.jpeg";
+const SRC = "/media/mockup.mp4";
+const POSTER = "/media/mockup-poster.jpeg";
 // Beat between loops — the video isn't seamlessly looped; it pauses, then
 // restarts (see the effect below).
 const LOOP_PAUSE_MS = 3000;

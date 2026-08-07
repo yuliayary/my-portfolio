@@ -7,15 +7,15 @@ tags: ["Mobile design", "Web design"]
 type: "Website design"
 order: 1
 cover: "" # TODO: add cover image to /public/images/ and reference it here
-logo: "/shadows_logo.svg"
-mark: "/shadows_icon.svg"
+logo: "/brand/shadows-logo.svg"
+mark: "/brand/shadows-mark.svg"
 ---
 
 This project was done during my studies at Projector Creative and Tech Online Institute for a real client, Shadows project, an NGO that aims to protect and popularize Ukrainian culture.
 
 Working with the client involved an initial briefing and a final presentation. Direct communication and intermediate feedback were unfortunately not foreseen for this project.
 
-![Project overview](/image1.png)
+![Project overview](/case-studies/shadows/overview.png)
 
 ## The task
 
@@ -27,8 +27,8 @@ My job was to design an information website for the Shadows project's new campai
 
 Shadows project already has a few websites for their previous campaigns and an established visual identity, but they were open to experiments for their new project.
 
-![Shadows project's previous campaign website](/image2a.png)
-![Another Shadows project campaign website](/image2b.png)
+![Shadows project's previous campaign website](/case-studies/shadows/prev-campaign-1.png)
+![Another Shadows project campaign website](/case-studies/shadows/prev-campaign-2.png)
 
 ## The challenges
 
@@ -38,7 +38,7 @@ First, Ukrainian decolonization is not a light topic. The client provided a mood
 
 *How might we make a heavy topic easily consumable?*
 
-![Client's moodboard](/Moodboard.png)
+![Client's moodboard](/case-studies/shadows/moodboard.png)
 
 Second challenge: the content for the future website was mostly missing. The main action for this website should be to download a decolonization guide, which wasn't ready at the time. Most parts of the website were still placeholders. The only known was an approximate structure of the website.
 
@@ -48,8 +48,8 @@ Second challenge: the content for the future website was mostly missing. The mai
 
 To fill the gap of no content for the website available, I've decided to learn about Ukrainian decolonization myself. Luckily, this topic was one of my interests, and I had a book on decolonization by a Ukrainian author at home. It helped me understand that decolonization is not a linear process and involves navigating a range of feelings, such as helplessness, shame, anger, and grief. New knowledge is key to reaching the next stage of decolonization, and hopefully our informational website can help people too.
 
-![Book on Ukrainian decolonization](/book1.png)
-![Book on Ukrainian decolonization](/book2.png)
+![Book on Ukrainian decolonization](/case-studies/shadows/book-1.png)
+![Book on Ukrainian decolonization](/case-studies/shadows/book-2.png)
 
 ## Looking for the metaphor
 
@@ -59,28 +59,28 @@ Another important part of the website that needed to be represented was knowledg
 
 Putting both metaphors together, here is my idea for this website: make parts of the website feel like a growing tree. Interacting with the website means getting more knowledge, which turns on the light and makes the tree more alive.
 
-![Light as a metaphor for knowledge](/lights.png "narrow")
+![Light as a metaphor for knowledge](/case-studies/shadows/lights.png "narrow")
 
 ## Some references
 
 Shadows project's previous campaigns, working with light, the Ukrainian symbol called the tree of life, and some Gen Z aesthetics.
 
-![References board](/references.png)
+![References board](/case-studies/shadows/references.png)
 
 ## The result
 
 [video: Looping demo of the final Shadows website design]
 
-![Final Shadows website design](/1.png)
+![Final Shadows website design](/case-studies/shadows/result-1.png)
 
-![Shadows website design detail](/2a.png)
-![Shadows website design detail](/2b.png)
+![Shadows website design detail](/case-studies/shadows/result-2a.png)
+![Shadows website design detail](/case-studies/shadows/result-2b.png)
 
-![Shadows website design detail](/3.png)
+![Shadows website design detail](/case-studies/shadows/result-3.png)
 
-![Shadows website design detail](/4.png)
+![Shadows website design detail](/case-studies/shadows/result-4.png)
 
-![Shadows website design detail](/5.png)
+![Shadows website design detail](/case-studies/shadows/result-5.png)
 
 ## Client's feedback
 

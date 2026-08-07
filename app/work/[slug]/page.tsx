@@ -57,7 +57,7 @@ export default async function CaseStudyPage({
               className="inline-flex items-center gap-2 font-body text-body2 text-grey-dark transition-colors hover:text-brand-black"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/arrow_back.svg" alt="" width={20} height={20} className="shrink-0" />
+              <img src="/icons/arrow-back.svg" alt="" width={20} height={20} className="shrink-0" />
               Back to all projects
             </a>
           </div>

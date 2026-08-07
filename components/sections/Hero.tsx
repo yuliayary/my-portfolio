@@ -25,7 +25,7 @@ export default function Hero() {
           {SUB_ITEMS.map((item) => (
             <li key={item} className="flex items-center gap-2 font-body text-body2 text-brand-black md:text-body1">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/hero_icon.svg" alt="" width={22} height={24} className="h-5 w-auto shrink-0" />
+              <img src="/icons/hero-icon.svg" alt="" width={22} height={24} className="h-5 w-auto shrink-0" />
               {item}
             </li>
           ))}

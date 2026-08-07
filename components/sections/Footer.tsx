@@ -19,7 +19,7 @@ export default function Footer() {
       <Container className="relative">
         <p className="flex items-center gap-2 font-body text-body2 text-brand-black">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/contact_me.svg" alt="" width={24} height={24} className="shrink-0" />
+          <img src="/icons/contact-me.svg" alt="" width={24} height={24} className="shrink-0" />
           {/* Wrapped in a span so the <br> stays in normal flow rather than
               becoming a flex item, which would stop it breaking the line. */}
           <span>

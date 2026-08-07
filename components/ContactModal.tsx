@@ -19,7 +19,7 @@ function ContactLinks({ onEmailCopy, copied }: { onEmailCopy: () => void; copied
       >
         LinkedIn
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/arrow_outward.svg" alt="" width={16} height={16} className="shrink-0" />
+        <img src="/icons/arrow-outward.svg" alt="" width={16} height={16} className="shrink-0" />
       </a>
       <button
         type="button"
@@ -28,7 +28,7 @@ function ContactLinks({ onEmailCopy, copied }: { onEmailCopy: () => void; copied
       >
         {copied ? "Copied!" : CONTACT_EMAIL}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/content_copy.svg" alt="" width={16} height={16} className="shrink-0" />
+        <img src="/icons/content-copy.svg" alt="" width={16} height={16} className="shrink-0" />
       </button>
       <a
         href={CV_URL}
@@ -37,7 +37,7 @@ function ContactLinks({ onEmailCopy, copied }: { onEmailCopy: () => void; copied
       >
         CV
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/arrow_downward.svg" alt="" width={16} height={16} className="shrink-0" />
+        <img src="/icons/arrow-downward.svg" alt="" width={16} height={16} className="shrink-0" />
       </a>
     </>
   );
@@ -116,7 +116,7 @@ export default function ContactModal() {
           className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-h4 font-heading text-brand-black md:text-h3"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/contact_me.svg" alt="" width={16} height={16} className="shrink-0" />
+          <img src="/icons/contact-me.svg" alt="" width={16} height={16} className="shrink-0" />
           Contact me
         </motion.button>
 
