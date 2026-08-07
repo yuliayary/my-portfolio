@@ -9,7 +9,7 @@ const CASE_STUDIES = [
     type: "Website design",
     image: "/thumbnail.png",
   },
-  { slug: "project-two", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
+  { slug: "parking-app", title: "Designing a parking app", type: "App design" },
   { slug: "project-three", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
   { slug: "project-four", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
 ];

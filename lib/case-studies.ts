@@ -16,6 +16,15 @@ export type CaseStudyMeta = {
   type: string;
   order: number;
   cover: string;
+  /** Client logo shown next to the company name; empty to hide the row. */
+  logo: string;
+  /** Decorative brand mark under the header; empty to hide it. */
+  mark: string;
+  /**
+   * When true, the `\n` in `title` only breaks on small screens; on desktop the
+   * title collapses to one line. When false (default), it breaks at all sizes.
+   */
+  titleBreakMobileOnly: boolean;
 };
 
 export type CaseStudy = {
@@ -47,6 +56,9 @@ export function getCaseStudy(slug: string): CaseStudy | null {
       type: String(data.type ?? ""),
       order: Number(data.order ?? 0),
       cover: String(data.cover ?? ""),
+      logo: String(data.logo ?? ""),
+      mark: String(data.mark ?? ""),
+      titleBreakMobileOnly: Boolean(data.titleBreakMobileOnly ?? false),
     },
     content,
   };

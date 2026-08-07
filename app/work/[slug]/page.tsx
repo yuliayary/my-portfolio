@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Header from "@/components/sections/Header";
@@ -62,36 +63,59 @@ export default async function CaseStudyPage({
           </div>
 
           <header className="flex flex-col items-center pt-16 text-center md:pt-24">
-            {/* The title carries an authored line break (see frontmatter). */}
-            <h1 className="font-heading text-h2 whitespace-pre-line text-brand-black md:text-h1">
-              {meta.title}
+            {/* The title carries an authored line break (`\n` in frontmatter).
+                By default it breaks at all sizes; with `titleBreakMobileOnly`
+                the break is dropped on desktop so the title sits on one line. */}
+            <h1 className="font-heading text-h2 text-brand-black md:text-h1">
+              {meta.title.split("\n").map((line, i) => (
+                <Fragment key={i}>
+                  {i > 0 &&
+                    (meta.titleBreakMobileOnly ? (
+                      <>
+                        <br className="md:hidden" />
+                        <span className="hidden md:inline"> </span>
+                      </>
+                    ) : (
+                      <br />
+                    ))}
+                  {line}
+                </Fragment>
+              ))}
             </h1>
 
-            <div className="mt-6 flex items-center gap-2">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/shadows_logo.svg"
-                alt=""
-                width={20}
-                height={20}
-                className="h-5 w-5 shrink-0 object-contain"
-              />
-              <span className="font-body text-body2 text-brand-black md:text-body1">
-                {meta.company}
-              </span>
-            </div>
+            {/* Client row: shown only when a case study defines a company/logo
+                (e.g. Shadows). Study projects with no client omit it. */}
+            {(meta.company || meta.logo) && (
+              <div className="mt-6 flex items-center gap-2">
+                {meta.logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={meta.logo}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="h-5 w-5 shrink-0 object-contain"
+                  />
+                )}
+                <span className="font-body text-body2 text-brand-black md:text-body1">
+                  {meta.company}
+                </span>
+              </div>
+            )}
 
-            {/* Decorative brand marks (three blue pixel glyphs), sized to match
-                the Hero's bullet glyphs on the home page (h-5). */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/shadows_icon.svg"
-              alt=""
-              width={140}
-              height={48}
-              className="mt-6 h-5 w-auto"
-              aria-hidden="true"
-            />
+            {/* Decorative brand mark, sized to match the Hero's bullet glyphs on
+                the home page (h-5). Shown only when the case study defines one. */}
+            {meta.mark && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={meta.mark}
+                alt=""
+                width={140}
+                height={48}
+                className="mt-6 h-5 w-auto"
+                aria-hidden="true"
+              />
+            )}
 
             {/* The gap above this button and the gap below it (to the body) are
                 kept equal. */}

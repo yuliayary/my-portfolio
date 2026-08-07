@@ -7,6 +7,8 @@ tags: ["Mobile design", "Web design"]
 type: "Website design"
 order: 1
 cover: "" # TODO: add cover image to /public/images/ and reference it here
+logo: "/shadows_logo.svg"
+mark: "/shadows_icon.svg"
 ---
 
 This project was done during my studies at Projector Creative and Tech Online Institute for a real client, Shadows project, an NGO that aims to protect and popularize Ukrainian culture.
