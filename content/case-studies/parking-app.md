@@ -68,7 +68,9 @@ Since primary user research wasn't part of this project's scope, I built my unde
 
 Before moving into individual screens, I mapped out the core user flow — from opening the app to finding a spot, reserving it, tracking an active session, and handling payment or a fine if one occurs. Laying this out early made sure every screen served a specific step in that path, rather than screens getting designed in isolation and stitched together afterward.
 
-![User flow — the full journey from opening the app to finding a spot, reserving, tracking a session, and handling payment or a fine](/case-studies/parking/user-flow-full.png)
+![The complete user flow board mapping the full journey from opening the app to payment](/case-studies/parking/user-flow-full.png)
+
+![Detail of the user flow — home page branching into parking map, register, and log in](/case-studies/parking/user-flow.png)
 
 ## The result
 
