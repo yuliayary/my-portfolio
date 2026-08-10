@@ -94,19 +94,25 @@ Registration collects only what's needed to actually use the app (name, email, c
 
 The home screen leads with the map, since that's the core mental model from the brief's "killer feature" — one map, one search, across any Ukrainian city, rather than a directory of separate city systems. Filters (price, free parking, 24/7 access, CCTV/security) let users narrow spots by what actually matters to them beyond just proximity. Tapping a spot surfaces price per hour, free spots remaining, and the car plate that will be used — confirming the right details *before* committing to "Reserve now," which matters for a payment-driven flow where mistakes cost money.
 
-[map screens]
+![Map screens — parking spots on the map, filters, and a selected spot's details](/case-studies/parking/map-desktop.png "desktop")
+![Map of available parking spots across the city](/case-studies/parking/map-mobile-1.png "mobile")
+![Filters — price, free parking, 24/7 access, CCTV/security](/case-studies/parking/map-mobile-2.png "mobile")
+![Selected spot — price per hour, free spots, and Reserve now](/case-studies/parking/map-mobile-3.png "mobile")
 
 **The parking session**
 
 This is where the case study's core emotional problem — *did I actually start/stop the meter?* — gets a direct answer. "Your parking has started" and "Your parking has finished" are explicit confirmation states, not just a silent timer running in the background. Each includes price per hour and time parked, so the cost is never a surprise. A secondary "Remind me" action on the active session addresses the brief's requirement for a nudge before the driver forgets and gets fined — this is a small screen, but it's a direct design response to the anxiety named in the problem section.
 
-[state screens]
+![Parking session screens — parking started and parking finished confirmations](/case-studies/parking/state-desktop.png "desktop")
+![Your parking has started — price per hour, time parked, Finish & Pay, Remind me](/case-studies/parking/state-mobile-1.png "mobile")
+![Your parking has finished — total amount to pay](/case-studies/parking/state-mobile-2.png "mobile")
 
 **When a fine happens anyway**
 
 Rather than treating a parking ticket as a dead-end error state, it's designed with the same visual language as the rest of the flow (same card layout, same loop motif) — plus the same "Remind me" and a clear "Pay now" action. Keeping the fine screen inside the app's normal visual system, instead of some jarring reformatted receipt, was a deliberate choice to reduce the friction/embarrassment a driver feels when they've been fined, per the brief's "avoid negative thoughts about parking" ambition.
 
-[fine screens]
+![Parking ticket screen — date, time, amount to be paid, Pay now and Remind me](/case-studies/parking/fine-desktop.png "desktop")
+![You received a parking ticket — amount to be paid, Pay now, Remind me](/case-studies/parking/fine-mobile.png "mobile")
 
 ## Reflection
 
