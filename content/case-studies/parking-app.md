@@ -7,7 +7,7 @@ industry: ""
 tags: ["Mobile design"]
 type: "App design"
 order: 2
-cover: "/case-studies/parking/thumbnail.png"
+cover: "/case-studies/parking/cover.png"
 mark: "/brand/parking-mark.svg"
 ---
 
