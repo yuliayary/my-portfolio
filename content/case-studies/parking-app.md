@@ -68,9 +68,7 @@ Since primary user research wasn't part of this project's scope, I built my unde
 
 Before moving into individual screens, I mapped out the core user flow — from opening the app to finding a spot, reserving it, tracking an active session, and handling payment or a fine if one occurs. Laying this out early made sure every screen served a specific step in that path, rather than screens getting designed in isolation and stitched together afterward.
 
-![The complete user flow board mapping the full journey from opening the app to payment](/case-studies/parking/user-flow-full.png)
-
-![Detail of the user flow — home page branching into parking map, register, and log in](/case-studies/parking/user-flow.png)
+![User flow — the full journey from opening the app to finding a spot, reserving, tracking a session, and handling payment or a fine](/case-studies/parking/user-flow-full.png)
 
 ## The result
 
@@ -78,13 +76,17 @@ Before moving into individual screens, I mapped out the core user flow — from 
 
 The welcome screen introduces the loop — "Find parking → Park → Keep going".
 
-![The welcome screen introducing the loop — Find parking, Park, Keep going — with the Parkovka app icon](/case-studies/parking/thumbnail.png "narrow")
+![Welcome screen introducing the loop — Find parking, Park, Keep going](/case-studies/parking/welcome-desktop.png "desktop")
+![Welcome screen introducing the loop — Find parking, Park, Keep going](/case-studies/parking/welcome-mobile.png "mobile")
 
 **Getting set up**
 
 Registration collects only what's needed to actually use the app (name, email, car plate) rather than a heavier onboarding form, and payment setup supports credit card, Apple Pay, and Google Pay — covering the range of payment habits across a broad, non-tech-first national user base rather than assuming everyone defaults to one payment method.
 
-[account screens]
+![Account setup screens — create account, add payment method, add credit card](/case-studies/parking/account-desktop.png "desktop")
+![Create new account — name, surname, email, car plate](/case-studies/parking/account-mobile-1.png "mobile")
+![Add your payment details — credit card, Apple Pay, or Google Pay](/case-studies/parking/account-mobile-2.png "mobile")
+![Add your credit card details](/case-studies/parking/account-mobile-3.png "mobile")
 
 **Finding and reserving a spot**
 

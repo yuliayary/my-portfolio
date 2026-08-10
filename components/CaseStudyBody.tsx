@@ -2,6 +2,7 @@ import Image from "next/image";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import VideoEmbed from "@/components/VideoEmbed";
+import ResponsiveScreens from "@/components/ResponsiveScreens";
 
 // The id given to the "The result" heading so the "Jump to result" button in
 // the page header can anchor to it. Kept in sync with slugify() below.
@@ -133,11 +134,29 @@ const components: Components = {
       const images = imgKids.map((img) => ({
         src: String(img.properties?.src ?? ""),
         alt: String(img.properties?.alt ?? ""),
-        // An image titled "narrow" is capped at the text column width.
-        narrow: img.properties?.title === "narrow",
+        title: img.properties?.title,
       }));
+
+      // Images tagged with a "desktop"/"mobile" title become a responsive block:
+      // the desktop composite on md+, and the mobile screen(s) — a swipeable
+      // carousel when there are several — on small screens.
+      const hasResponsive = images.some(
+        (im) => im.title === "desktop" || im.title === "mobile",
+      );
+      if (hasResponsive) {
+        const desktop = images.find((im) => im.title === "desktop");
+        const mobile = images.filter((im) => im.title === "mobile");
+        return (
+          <ResponsiveScreens
+            desktop={desktop && { src: desktop.src, alt: desktop.alt }}
+            mobile={mobile.map((im) => ({ src: im.src, alt: im.alt }))}
+          />
+        );
+      }
+
       return images.length === 1 ? (
-        <ContentImage src={images[0].src} alt={images[0].alt} narrow={images[0].narrow} />
+        // An image titled "narrow" is capped at the text column width.
+        <ContentImage src={images[0].src} alt={images[0].alt} narrow={images[0].title === "narrow"} />
       ) : (
         <ImageRow images={images} />
       );
