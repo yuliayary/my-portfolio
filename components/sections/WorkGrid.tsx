@@ -9,7 +9,12 @@ const CASE_STUDIES = [
     type: "Website design",
     image: "/case-studies/shadows/thumbnail.png",
   },
-  { slug: "parking-app", title: "Designing a parking app", type: "App design" },
+  {
+    slug: "parking-app",
+    title: "Designing a parking app",
+    type: "App design",
+    image: "/case-studies/parking/thumbnail.png",
+  },
   { slug: "project-three", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
   { slug: "project-four", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
 ];

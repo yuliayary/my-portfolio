@@ -7,7 +7,7 @@ industry: ""
 tags: ["Mobile design"]
 type: "App design"
 order: 2
-cover: "" # TODO: add cover image to /public/images/ and reference it here
+cover: "/case-studies/parking/thumbnail.png"
 mark: "/brand/parking-mark.svg"
 ---
 
@@ -54,19 +54,23 @@ Together, the two symbols let the brand feel state-backed and trustworthy, while
 
 The loop-and-pause motif carries through logo, and key UI moments (e.g. the parking session start/stop states), so the concept is a visual language.
 
-[2 pictures for the concept]
+![The loop — a road that folds into a pause symbol, representing drive, pause, keep going](/case-studies/parking/loop-mark.png)
+![The international "P" parking symbol as it appears on street signs across different countries](/case-studies/parking/parking-sign.png)
 
 ## Competitor & reference research
 
 Since primary user research wasn't part of this project's scope, I built my understanding of the space through a broad competitor and reference review instead. This covered three layers: **direct competitors** in Ukraine (Kyiv Digital, Privat24 Parking) to see how the fragmentation problem currently plays out in practice; **parking apps from other countries** to see how other markets handle search, payment, and fines end-to-end; and **apps where the map is the central interface** more broadly, to understand interaction patterns for filtering, pins, and spot selection that users already have muscle memory for. This reference pool shaped decisions like leading with the map on the home screen and using familiar filter patterns, rather than inventing new interaction models from scratch.
 
-[references]
+![Reference board of parking apps from other countries](/case-studies/parking/reference-parking.png)
+![Reference board of apps where the map is the central interface](/case-studies/parking/reference-map.png)
 
 ## User flow
 
 Before moving into individual screens, I mapped out the core user flow — from opening the app to finding a spot, reserving it, tracking an active session, and handling payment or a fine if one occurs. Laying this out early made sure every screen served a specific step in that path, rather than screens getting designed in isolation and stitched together afterward.
 
-[user flow diagram]
+![The complete user flow board mapping the full journey from opening the app to payment](/case-studies/parking/user-flow-full.png)
+
+![Detail of the user flow — home page branching into parking map, register, and log in](/case-studies/parking/user-flow.png)
 
 ## The result
 
@@ -74,7 +78,7 @@ Before moving into individual screens, I mapped out the core user flow — from 
 
 The welcome screen introduces the loop — "Find parking → Park → Keep going".
 
-[welcome screen]
+![The welcome screen introducing the loop — Find parking, Park, Keep going — with the Parkovka app icon](/case-studies/parking/thumbnail.png "narrow")
 
 **Getting set up**
 
