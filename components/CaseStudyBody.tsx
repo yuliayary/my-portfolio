@@ -2,7 +2,8 @@ import Image from "next/image";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import VideoEmbed from "@/components/VideoEmbed";
-import ResponsiveScreens from "@/components/ResponsiveScreens";
+import ResponsiveScreens, { type Shot } from "@/components/ResponsiveScreens";
+import { getImageSize } from "@/lib/image-size";
 
 // The id given to the "The result" heading so the "Jump to result" button in
 // the page header can anchor to it. Kept in sync with slugify() below.
@@ -39,16 +40,17 @@ function slugify(text: string): string {
  * column width so it lines up with the running copy.
  */
 function ContentImage({ src, alt, narrow }: { src: string; alt: string; narrow?: boolean }) {
+  // Real intrinsic dimensions let next/image reserve the aspect-ratio box up
+  // front; `h-auto w-full` then scales it responsively (spanning the article, or
+  // the text column when narrow, capped by the shell on wide screens).
+  const { width, height } = getImageSize(src);
   return (
     <figure className={`mt-12 ${narrow ? COLUMN : "w-full"}`}>
-      {/* width/height 0 + sizes lets the image size responsively to its natural
-          aspect ratio; it spans the article (or the text column when narrow),
-          capped by the shell on wide screens. */}
       <Image
         src={src}
         alt={alt}
-        width={0}
-        height={0}
+        width={width}
+        height={height}
         sizes={narrow ? "(min-width: 560px) 560px, 100vw" : "(min-width: 1280px) 1200px, 100vw"}
         className="h-auto w-full rounded-[24px]"
       />
@@ -60,18 +62,21 @@ function ContentImage({ src, alt, narrow }: { src: string; alt: string; narrow?:
 function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
   return (
     <div className="mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-2">
-      {images.map((im, i) => (
-        <figure key={i} className="w-full">
-          <Image
-            src={im.src}
-            alt={im.alt}
-            width={0}
-            height={0}
-            sizes="(min-width: 768px) 590px, 100vw"
-            className="h-auto w-full rounded-[24px]"
-          />
-        </figure>
-      ))}
+      {images.map((im, i) => {
+        const { width, height } = getImageSize(im.src);
+        return (
+          <figure key={i} className="w-full">
+            <Image
+              src={im.src}
+              alt={im.alt}
+              width={width}
+              height={height}
+              sizes="(min-width: 768px) 590px, 100vw"
+              className="h-auto w-full rounded-[24px]"
+            />
+          </figure>
+        );
+      })}
     </div>
   );
 }
@@ -144,12 +149,17 @@ const components: Components = {
         (im) => im.title === "desktop" || im.title === "mobile",
       );
       if (hasResponsive) {
+        const toShot = (im: { src: string; alt: string }): Shot => ({
+          src: im.src,
+          alt: im.alt,
+          ...getImageSize(im.src),
+        });
         const desktop = images.find((im) => im.title === "desktop");
         const mobile = images.filter((im) => im.title === "mobile");
         return (
           <ResponsiveScreens
-            desktop={desktop && { src: desktop.src, alt: desktop.alt }}
-            mobile={mobile.map((im) => ({ src: im.src, alt: im.alt }))}
+            desktop={desktop && toShot(desktop)}
+            mobile={mobile.map(toShot)}
           />
         );
       }

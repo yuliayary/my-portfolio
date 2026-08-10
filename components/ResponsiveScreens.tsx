@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useCallback, useRef, useState } from "react";
 
-export type Shot = { src: string; alt: string };
+export type Shot = { src: string; alt: string; width: number; height: number };
 
 // Gap between carousel slides (Tailwind gap-4 = 16px). Kept in sync with the
 // class below so the active-dot math matches the rendered layout.
@@ -22,8 +22,8 @@ function Shot({ shot, sizes }: { shot: Shot; sizes: string }) {
     <Image
       src={shot.src}
       alt={shot.alt}
-      width={0}
-      height={0}
+      width={shot.width}
+      height={shot.height}
       sizes={sizes}
       className="h-auto w-full rounded-[24px]"
     />
