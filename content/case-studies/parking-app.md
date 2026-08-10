@@ -61,8 +61,8 @@ The loop-and-pause motif carries through logo, and key UI moments (e.g. the park
 
 Since primary user research wasn't part of this project's scope, I built my understanding of the space through a broad competitor and reference review instead. This covered three layers: **direct competitors** in Ukraine (Kyiv Digital, Privat24 Parking) to see how the fragmentation problem currently plays out in practice; **parking apps from other countries** to see how other markets handle search, payment, and fines end-to-end; and **apps where the map is the central interface** more broadly, to understand interaction patterns for filtering, pins, and spot selection that users already have muscle memory for. This reference pool shaped decisions like leading with the map on the home screen and using familiar filter patterns, rather than inventing new interaction models from scratch.
 
-![Reference board of parking apps from other countries](/case-studies/parking/reference-parking.png)
-![Reference board of apps where the map is the central interface](/case-studies/parking/reference-map.png)
+![Reference board of parking apps from other countries](/case-studies/parking/reference-parking-apps.png)
+![Reference board of apps where the map is the central interface](/case-studies/parking/reference-map-apps.png)
 
 ## User flow
 
