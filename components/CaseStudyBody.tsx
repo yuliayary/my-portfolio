@@ -177,7 +177,7 @@ const components: Components = {
     if (kids.length === 1 && kids[0].type === "element" && kids[0].tagName === "em") {
       return (
         <p
-          className={`${COLUMN} mt-8 border-l-2 border-brand-blue pl-4 font-body text-body2 italic text-brand-black md:text-body1`}
+          className={`${COLUMN} mt-8 border-l-2 border-brand-blue pl-4 font-body text-body2 italic leading-[1.6] text-brand-black md:text-body1`}
         >
           {children}
         </p>
