@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/yulia-yaryna/";
-// TODO: replace with the real CV file once provided
-const CV_URL = "#";
+const CV_URL = "/CV_Yuliia_Yaryna_UX_designer.pdf";
 const CONTACT_EMAIL = "yulia.yaryna@gmail.com";
 
 function ContactLinks({ onEmailCopy, copied }: { onEmailCopy: () => void; copied: boolean }) {
