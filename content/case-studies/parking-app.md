@@ -121,7 +121,7 @@ As a UX researcher, starting this project without the chance to actually learn f
 **What I'd do differently**
 
 - Talk to real drivers — especially people currently juggling Kyiv Digital, Privat24, or city-specific tools — to validate whether "one app for everything" is actually the friction point.
-- Address a mentor's feedback I haven't fully solved: some screens, like an active parking session versus a parking ticket, look quite similar at a glance. They share the same layout and loop motif, which was meant for visual consistency, but risks working against the user in a moment where the difference (still fine, vs. now a problem) really matters.
+- Address a mentor's feedback I haven't fully solved: some screens, like an active parking session versus a parking ticket, look quite similar at a glance. They share the same layout and loop motif, which was meant for visual consistency, but risks working against the user in a moment where the difference really matters.
 - Reduce my reliance on color to signal something's gone wrong (e.g. red vs. blue on the fine screen). It's not accessible for colorblind users, and color alone is a weak signal under stress anyway.
 - Navigation to the parking spot wasn't part of my design. Looking at other map-based apps, turn-by-turn or at least a "navigate here" shortcut is fairly standard. With more time, I'd validate how critical this actually is for users and add it if so.
 

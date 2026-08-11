@@ -69,6 +69,8 @@ Shadows project's previous campaigns, working with light, the Ukrainian symbol c
 
 ## The result
 
+The site starts in the dark. Interacting with it turns the light on, because knowledge is light.
+
 [video: Looping demo of the final Shadows website design]
 
 ![Home page in its unlit state — a dim flower and the headline "Let's Talk About Ukrainian Decolonization"](/case-studies/shadows/desktop-home1.png "desktop")
@@ -76,8 +78,12 @@ Shadows project's previous campaigns, working with light, the Ukrainian symbol c
 ![Home page, mobile — unlit flower and the "Turn the light on" call to action](/case-studies/shadows/mobile_home1.png "mobile")
 ![Home page, mobile — lit up after turning the light on](/case-studies/shadows/mobile_home2.png "mobile")
 
+The guide is the only section that's fully white. It's the main action, and where the most knowledge lives, so it stays lit.
+
 ![Guide page — "Ukrainian Decolonization: A Guidebook" with Download and Share](/case-studies/shadows/desktop-guide.png "desktop")
 ![Guide page, mobile](/case-studies/shadows/mobile_guide.png "mobile")
+
+The rest of the site is lighting up as you move through it.
 
 ![Stories page — "Perspective from the next generation of Ukrainians," a carousel of young contributors](/case-studies/shadows/desktop-stories.png "desktop")
 ![Stories page, mobile](/case-studies/shadows/mobile_stories.png "mobile")
