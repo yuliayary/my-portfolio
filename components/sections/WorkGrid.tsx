@@ -19,8 +19,6 @@ const CASE_STUDIES = [
     type: "App design",
     image: "/case-studies/parking/cover.png",
   },
-  { slug: "project-three", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
-  { slug: "project-four", title: "Shadows project: Ukrainian decolonization", type: "Website design" },
 ];
 
 export default function WorkGrid() {
