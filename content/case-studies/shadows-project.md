@@ -71,16 +71,26 @@ Shadows project's previous campaigns, working with light, the Ukrainian symbol c
 
 [video: Looping demo of the final Shadows website design]
 
-![Final Shadows website design](/case-studies/shadows/result-1.png)
+![Home page in its unlit state — a dim flower and the headline "Let's Talk About Ukrainian Decolonization"](/case-studies/shadows/desktop-home1.png "desktop")
+![Home page lit up after "Turn the light on" — the flower glows](/case-studies/shadows/desktop-home2.png "desktop")
+![Home page, mobile — unlit flower and the "Turn the light on" call to action](/case-studies/shadows/mobile_home1.png "mobile")
+![Home page, mobile — lit up after turning the light on](/case-studies/shadows/mobile_home2.png "mobile")
 
-![Shadows website design detail](/case-studies/shadows/result-2a.png)
-![Shadows website design detail](/case-studies/shadows/result-2b.png)
+![Guide page — "Ukrainian Decolonization: A Guidebook" with Download and Share](/case-studies/shadows/desktop-guide.png "desktop")
+![Guide page, mobile](/case-studies/shadows/mobile_guide.png "mobile")
 
-![Shadows website design detail](/case-studies/shadows/result-3.png)
+![Stories page — "Perspective from the next generation of Ukrainians," a carousel of young contributors](/case-studies/shadows/desktop-stories.png "desktop")
+![Stories page, mobile](/case-studies/shadows/mobile_stories.png "mobile")
 
-![Shadows website design detail](/case-studies/shadows/result-4.png)
+![Resources page — expandable cards grouping reading by theme](/case-studies/shadows/desktop-resources.png "desktop")
+![Join the team page — "Position not listed?" application form](/case-studies/shadows/desktop-jobs.png "desktop")
+![Donate page — QR code and "Donate with PayPal"](/case-studies/shadows/desktop-donate.png "desktop")
+![Resources page, mobile](/case-studies/shadows/mobile_resources.png "mobile")
+![Join the team page, mobile](/case-studies/shadows/mobile_jobs.png "mobile")
+![Donate page, mobile](/case-studies/shadows/mobile_donate.png "mobile")
 
-![Shadows website design detail](/case-studies/shadows/result-5.png)
+![Thank-you page shown after donating — glowing flowers and "Thank you for your support!"](/case-studies/shadows/desktop-thanks.png "desktop")
+![Thank-you page, mobile](/case-studies/shadows/mobile_thanks.png "mobile")
 
 ## Client's feedback
 

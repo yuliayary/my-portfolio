@@ -100,27 +100,31 @@ function MobileCarousel({ shots }: { shots: Shot[] }) {
 
 /**
  * A results block with distinct desktop and mobile artwork. On md+ the desktop
- * composite is shown full-bleed; below md the mobile screens are shown — a
- * single screen when there's one, or a swipeable carousel when there are
- * several. Authored in markdown by tagging images with a `"desktop"` or
- * `"mobile"` title (see CaseStudyBody).
+ * shot(s) are shown full-bleed — one, or several stacked when a block spans
+ * multiple desktop states; below md the mobile screens are shown — a single
+ * screen when there's one, or a swipeable carousel when there are several.
+ * Authored in markdown by tagging images with a `"desktop"` or `"mobile"` title
+ * (see CaseStudyBody).
  */
 export default function ResponsiveScreens({
-  desktop,
+  desktop = [],
   mobile,
 }: {
-  desktop?: Shot;
+  desktop?: Shot[];
   mobile: Shot[];
 }) {
+  const hasDesktop = desktop.length > 0;
   return (
     <figure className="mt-12 w-full">
-      {desktop && (
-        <div className="hidden md:block">
-          <Shot shot={desktop} sizes="(min-width: 1280px) 1200px, 100vw" />
+      {hasDesktop && (
+        <div className="hidden flex-col gap-6 md:flex">
+          {desktop.map((shot) => (
+            <Shot key={shot.src} shot={shot} sizes="(min-width: 1280px) 1200px, 100vw" />
+          ))}
         </div>
       )}
 
-      <div className={desktop ? "md:hidden" : undefined}>
+      <div className={hasDesktop ? "md:hidden" : undefined}>
         {mobile.length <= 1 ? (
           mobile[0] && <Shot shot={mobile[0]} sizes="100vw" />
         ) : (

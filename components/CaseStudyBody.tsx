@@ -154,11 +154,11 @@ const components: Components = {
           alt: im.alt,
           ...getImageSize(im.src),
         });
-        const desktop = images.find((im) => im.title === "desktop");
+        const desktop = images.filter((im) => im.title === "desktop");
         const mobile = images.filter((im) => im.title === "mobile");
         return (
           <ResponsiveScreens
-            desktop={desktop && toShot(desktop)}
+            desktop={desktop.map(toShot)}
             mobile={mobile.map(toShot)}
           />
         );

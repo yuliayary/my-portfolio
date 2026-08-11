@@ -129,8 +129,13 @@ export default async function CaseStudyPage({
 
           {/* first-child:mt-0 drops the intro paragraph's own top margin so this
               wrapper alone controls the button-to-text gap (matching the gap above
-              the button). */}
-          <div className="mt-12 [&>*:first-child]:mt-0 md:mt-16">
+              the button).
+              On desktop, consecutive image/video blocks (the result section, where
+              figures stack with no prose between them) get the tighter 24px gap —
+              matching the gap between stacked screens inside a single block —
+              instead of the 48px used between prose and imagery. Figures elsewhere
+              are always preceded by copy, so this only affects the result stack. */}
+          <div className="mt-12 [&>*:first-child]:mt-0 md:mt-16 md:[&>figure+figure]:mt-6">
             <CaseStudyBody content={content} />
           </div>
           </article>
